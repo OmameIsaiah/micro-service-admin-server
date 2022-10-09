@@ -1,0 +1,28 @@
+server:
+  port: 6060
+  servlet:
+    contextPath: /admin-server
+
+spring:
+  application:
+    name: admin-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://63.250.55.150:6060/eureka
+    instance:
+      preferIpAddress: true
+
+
+  instance:
+    metadata-map:
+      management:
+        context-path: ${server.servlet.context-path}/actuator
+
+#eureka.instance.metadata-map.management.context-path=${server.servlet.context-path}/actuator
+#spring.boot.admin.discovery.converter.management-context-path
+
+security:
+  basic:
+    enabled: false
