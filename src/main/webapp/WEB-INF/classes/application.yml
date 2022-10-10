@@ -1,5 +1,6 @@
 server:
-  port: 6060
+  port: 6062
+  #port: 6060
   servlet:
     contextPath: /admin-server
 
@@ -10,7 +11,8 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://63.250.55.150:6060/eureka
+      defaultZone: http://localhost:6060/eureka/eureka
+      #defaultZone: http://63.250.55.150:6060/eureka/eureka
     instance:
       preferIpAddress: true
 
